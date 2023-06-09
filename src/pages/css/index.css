@@ -1,23 +1,17 @@
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Basic styles */
 body {
     font-family: Inter, sans-serif;
     background-color: #140400;
     color: #ffffff;
-    background-image: url(mc1.jpg);
+    background-image: url(../../assets/mc1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
-.container {
-    max-width: 100%;
-    margin: 0 auto;
+.wrapper {
     padding: 20px;
 }
 
@@ -27,7 +21,7 @@ header {
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -85,13 +79,6 @@ section {
     font-size: 36px;
     margin-bottom: 20px;
 }
-
-.widget-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
 
 .discord-widget {
     justify-content: center;
@@ -160,25 +147,22 @@ footer {
     color: #ffffff;
     padding: 10px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
 
-.menu {
+menu {
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.menu li {
+menu li {
     display: inline-block;
     margin-right: 10px;
 }
 
-.menu li a {
+menu li a {
     display: inline-block;
     padding: 12px 24px;
     background-color: #559cad;
@@ -188,13 +172,13 @@ footer {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.menu li a:hover {
+menu li a:hover {
     background-color: #ffffff;
     color: #140400;
     transform: scale(1.05);
 }
 
-.menu li a:active {
+menu li a:active {
     transform: scale(0.95);
 }
 
