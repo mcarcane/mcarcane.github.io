@@ -11,7 +11,7 @@ body {
     font-family: Inter, sans-serif;
     background-color: #140400;
     color: #FFFFFC;
-    opacity: 0.95;
+    opacity: 0.99;
     background-image: url(mc1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,6 +57,7 @@ section {
     border-radius: 10px;
     background-color: #191B2A;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(25, 27, 42, 0.95);
 }
 
 #hero {
@@ -165,4 +166,33 @@ footer {
 
 .button-rounded:hover {
     border-radius: 10px;
+}
+
+.discord-widget {
+    flex: 1;
+    background-color: #1F212E;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+
+.widget-container {
+    display: flex;
+    align-items: center;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #1F212E;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    margin: 10px
+}
+
+.contact-form h3 {
+    color: #FFFFFC;
+    margin-bottom: 10px;
 }
