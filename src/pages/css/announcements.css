@@ -1,0 +1,330 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: Inter, sans-serif;
+    background-color: #140400;
+    color: #ffffff;
+    background-image: url(../../assets/mc1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #0d3b66;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #559cad;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #140400;
+    transform: scale(1.05);
+}
+
+nav ul li a:active {
+    transform: scale(0.95);
+}
+
+/* Main styles */
+section {
+    margin: 25px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(25, 27, 42, 0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#hero {
+    text-align: center;
+    margin: 25px;
+}
+
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.widget-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+
+.discord-widget {
+    justify-content: center;
+    flex: 1;
+    height: 500px;
+    width: 1000px;
+    background-color: #1f212e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+
+
+.discord-widget iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1f212e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1f212e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #559cad;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #140400;
+    transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+/* Footer styles */
+footer {
+    background-color: #0d3b66;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-top: auto;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #559cad;
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #ffffff;
+    color: #140400;
+    transform: scale(1.05);
+}
+
+.menu li a:active {
+    transform: scale(0.95);
+}
+
+
+/* Card styles */
+.card {
+    perspective: 1000px;
+    display: inline-block;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #0d3b66;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-back {
+    background-color: rgba(25, 27, 42, 0.95);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+.annonce-date {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.annonce-content {
+    font-size: 14px;
+}
+
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 767px) {
+    /* Modifiez les styles selon vos besoins */
+    header {
+        padding: 5px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        padding: 8px 16px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .discord-widget {
+        height: 250px;
+        margin: 5px;
+    }
+
+    .card {
+        height: 200px;
+        margin: 5px;
+    }
+
+    .card-front,
+    .card-back {
+        font-size: 18px;
+    }
+
+    .annonce-date {
+        font-size: 24px;
+    }
+
+    .annonce-content {
+        font-size: 12px;
+    }
+}
+
+
+/* Centrer les cartes sur les petits écrans */
+@media screen and (max-width: 768px) {
+    .announcement {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
+
+
+/* Styles pour le widget Discord sur les appareils mobiles */
+/* Masquer l'intégration Discord sur les appareils mobiles */
+@media screen and (max-width: 767px) {
+    .discord-widget {
+        display: none;
+    }
+}
