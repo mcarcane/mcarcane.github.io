@@ -94,27 +94,20 @@ section {
 
 
 .discord-widget {
-    justify-content: center;
-    flex: 1;
-    height: 500px;
-    width: 1000px;
-    background-color: #1f212e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio pour le format 16:9 */
+    height: 0;
+    overflow: hidden;
 }
-
 
 .discord-widget iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
 }
+
 
 textarea {
     width: 100%;
@@ -351,7 +344,8 @@ button.button {
         margin: 5px;
     }
 
-    .discord-widget iframe {
+    .discord-iframe {
         height: 100%;
+        width: 100%;
     }
 }
