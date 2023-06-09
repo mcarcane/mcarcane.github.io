@@ -10,21 +10,8 @@ function copyToClipboard(text) {
     document.body.removeChild(textarea);
 
     button.textContent = 'IP copiée !';
-    button.style.backgroundColor = 'rgba(85, 173, 115, 0.8)';
-    button.style.color = '#140400';
 
     setTimeout(function () {
         button.textContent = originalText;
-        button.style.backgroundColor = '';
-        button.style.color = '';
-    }, 1000);
-}
-
-function changeButtonColor() {
-    const button = document.getElementById('discordButton');
-    button.style.backgroundColor = 'green';
-
-    setTimeout(function () {
-        button.style.backgroundColor = '#559cad';
     }, 1000);
 }
