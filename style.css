@@ -95,7 +95,7 @@ section {
 
 .discord-widget {
     position: relative;
-    padding-bottom: 56.25%; /* Ratio pour le format 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
@@ -104,8 +104,9 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 
