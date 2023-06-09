@@ -346,16 +346,12 @@ button.button {
 /* Styles pour le widget Discord sur les appareils mobiles */
 @media only screen and (max-width: 768px) {
     .discord-widget {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
+        height: 250px;
+        width: 100%;
+        margin: 5px;
     }
 
     .discord-widget iframe {
-        position: absolute;
-        width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
     }
 }
