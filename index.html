@@ -1,5 +1,3 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,21 +24,56 @@
             <h1>Bienvenue sur Arcane Blades</h1>
             <p>Rejoignez notre communauté de joueurs passionnés sur notre serveur Minecraft.</p>
             <br>
-            <div class="widget-container">
-                <div class="contact-form">
-                    <h3>Contactez-nous</h3>
-                    <form action="https://formspree.io/f/maylqzqk" method="POST">
-                        <input type="text" name="name" placeholder="Nom" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <textarea name="message" placeholder="Message" required></textarea>
-                        <input type="submit" value="Envoyer">
-                    </form>
-                </div>
-                <div class="discord-widget">
-                    <iframe src="https://discord.com/widget?id=1108029635096223814&theme=dark" width="auto"
-                            height="auto" allowtransparency="true"
-                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                </div>
+            <div>
+                <button class="button" onclick="copyToClipboard('88.170.151.90:32768')" id="copyButton">Copier l'IP du
+                    serveur Minecraft
+                </button>
+            </div>
+
+            <script>
+                function copyToClipboard(text) {
+                    const button = document.getElementById('copyButton');
+                    const originalText = button.textContent;
+
+                    const textarea = document.createElement('textarea');
+                    textarea.value = text;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+
+                    button.textContent = 'IP copiée !';
+                    button.style.backgroundColor = 'rgba(85, 173, 115, 0.8)';
+                    button.style.color = '#140400';
+
+                    setTimeout(function () {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                        button.style.color = '';
+                    }, 1000);
+                }
+            </script>
+
+
+            <br>
+            <a href="https://discord.gg/RnPgShE6vh" class="button" onclick="changeButtonColor()" id="discordButton">Rejoindre
+                le serveur Discord</a>
+            <script>
+                function changeButtonColor() {
+                    const button = document.getElementById('discordButton');
+                    button.style.backgroundColor = 'green';
+
+                    setTimeout(function () {
+                        button.style.backgroundColor = '#559cad';
+                    }, 1000);
+                }
+            </script>
+            <br>
+            <br>
+            <div class="discord-widget">
+                <iframe src="https://discord.com/widget?id=1108029635096223814&theme=dark" width="auto"
+                        height="auto" allowtransparency="true"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </div>
         </div>
     </section>

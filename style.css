@@ -92,7 +92,7 @@ section {
     justify-content: space-between;
 }
 
-.contact-form,
+
 .discord-widget {
     flex: 1;
     height: 400px;
@@ -105,10 +105,6 @@ section {
     flex-direction: column;
 }
 
-.contact-form h3 {
-    color: #fffffc;
-    margin-bottom: 10px;
-}
 
 .discord-widget iframe {
     width: 100%;
@@ -195,6 +191,33 @@ footer {
 .menu li a:active {
     transform: scale(0.95);
 }
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #559cad;
+    color: #fffffc;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #fffffc;
+    color: #140400;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+button.button {
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
 
 /* Card styles */
 .card {
