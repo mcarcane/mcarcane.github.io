@@ -66,6 +66,22 @@
     </div>
 </section>
 
+<script>
+    // Code JavaScript pour le retournement des cartes sur les appareils mobiles
+    // Collez le code JavaScript ici
+
+    // Récupérer toutes les cartes
+    const cards = document.querySelectorAll('.card');
+
+    // Ajouter l'événement de retournement au toucher pour chaque carte
+    cards.forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.querySelector('.card-inner').classList.toggle('is-flipped');
+        });
+    });
+</script>
+
+
 <footer>
     <div class="container">
         <p>&copy; 2023 Arcane Blades. Tous droits réservés.</p>
