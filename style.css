@@ -328,3 +328,16 @@ button.button {
         font-size: 12px;
     }
 }
+
+/* Centrer les cartes sur les petits écrans */
+@media screen and (max-width: 768px) {
+    .announcement {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
