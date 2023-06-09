@@ -1,3 +1,10 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Basic styles */
 body {
     font-family: Inter, sans-serif;
@@ -12,6 +19,8 @@ body {
 }
 
 .wrapper {
+    max-width: 100%;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -72,7 +81,6 @@ section {
 
 #hero {
     text-align: center;
-    margin: 25px;
 }
 
 #hero h1 {
@@ -80,20 +88,22 @@ section {
     margin-bottom: 20px;
 }
 
+.widget-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+
 .discord-widget {
-    justify-content: center;
-    flex: 1;
+    max-width: 1000px;
     height: 500px;
-    width: 1000px;
     background-color: #1f212e;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    flex-direction: column;
 }
 
 
@@ -153,16 +163,18 @@ footer {
     margin-top: auto;
 }
 
-menu {
+.menu {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-menu li {
+.menu li {
     display: inline-block;
     margin-right: 10px;
 }
 
-menu li a {
+.menu li a {
     display: inline-block;
     padding: 12px 24px;
     background-color: #559cad;
@@ -172,13 +184,13 @@ menu li a {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-menu li a:hover {
+.menu li a:hover {
     background-color: #ffffff;
     color: #140400;
     transform: scale(1.05);
 }
 
-menu li a:active {
+.menu li a:active {
     transform: scale(0.95);
 }
 
@@ -190,6 +202,7 @@ menu li a:active {
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -200,73 +213,13 @@ menu li a:active {
 
 .button:active {
     transform: scale(0.95);
+    background-color: rgba(85, 173, 115, 0.8);
 }
 
 button.button {
     border: none;
     outline: none;
     font-size: 16px;
-}
-
-
-/* Card styles */
-.card {
-    perspective: 1000px;
-    display: inline-block;
-    cursor: pointer;
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-}
-
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    background-color: #0d3b66;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.card-back {
-    background-color: rgba(25, 27, 42, 0.95);
-    color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    transform: rotateY(180deg);
-    overflow-y: auto;
-}
-
-.annonce-date {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.annonce-content {
-    font-size: 14px;
 }
 
 

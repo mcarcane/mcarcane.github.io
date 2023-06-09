@@ -200,32 +200,6 @@ footer {
     transform: scale(0.95);
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #559cad;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.button:hover {
-    background-color: #ffffff;
-    color: #140400;
-    transform: scale(1.05);
-}
-
-.button:active {
-    transform: scale(0.95);
-}
-
-button.button {
-    border: none;
-    outline: none;
-    font-size: 16px;
-}
-
 
 /* Card styles */
 .card {
