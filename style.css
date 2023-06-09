@@ -341,3 +341,23 @@ button.button {
         margin: 10px;
     }
 }
+
+
+/* Styles pour le widget Discord sur les appareils mobiles */
+@media only screen and (max-width: 768px) {
+    .discord-widget {
+        width: 100%;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .discord-widget iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
