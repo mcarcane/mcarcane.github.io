@@ -6,114 +6,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcane Blades - Accueil</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="src/pages/css/index.css">
+    <link rel="stylesheet" type="text/css" href="src/pages/css/reset.css">
 </head>
 <body>
-<header>
-    <div class="container">
-        <h1 class="logo">Arcane Blades</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="annonces.html">Annonces</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <section id="hero">
-        <div class="container">
-            <h1>Bienvenue sur Arcane Blades</h1>
-            <p>Rejoignez notre communauté de joueurs passionnés sur notre serveur Minecraft.</p>
-            <br>
-            <div>
-                <button class="button" onclick="copyToClipboard('88.170.151.90:32768')" id="copyButton">Copier l'IP du
-                    serveur Minecraft
-                </button>
-            </div>
-
-            <script>
-                function copyToClipboard(text) {
-                    const button = document.getElementById('copyButton');
-                    const originalText = button.textContent;
-
-                    const textarea = document.createElement('textarea');
-                    textarea.value = text;
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textarea);
-
-                    button.textContent = 'IP copiée !';
-                    button.style.backgroundColor = 'rgba(85, 173, 115, 0.8)';
-                    button.style.color = '#140400';
-
-                    setTimeout(function () {
-                        button.textContent = originalText;
-                        button.style.backgroundColor = '';
-                        button.style.color = '';
-                    }, 1000);
-                }
-            </script>
-
-
-            <br>
-            <a href="https://discord.gg/RnPgShE6vh" class="button" onclick="changeButtonColor()" id="discordButton">Rejoindre
-                le serveur Discord</a>
-            <script>
-                function changeButtonColor() {
-                    const button = document.getElementById('discordButton');
-                    button.style.backgroundColor = 'green';
-
-                    setTimeout(function () {
-                        button.style.backgroundColor = '#559cad';
-                    }, 1000);
-                }
-            </script>
-            <br>
-            <br>
-            <div class="discord-widget">
-                <iframe class="discord-iframe" src="https://discord.com/widget?id=1108029635096223814&theme=dark"
-                        width="auto"
-                        height="auto" allowtransparency="true"
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-            </div>
+    <header>
+        <div class="wrapper">
+            <h1 class="logo">Arcane Blades</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="src/pages/announcements.html">Annonces</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="wrapper">
+                <h1>Bienvenue sur Arcane Blades</h1>
+                <p>Rejoignez notre communauté de joueurs passionnés sur notre serveur Minecraft.</p>
+                <br>
+                <div>
+                    <button class="button" onclick="copyToClipboard('88.170.151.90:32768')" id="copyButton">Copier l'IP du
+                        serveur Minecraft
+                    </button>
+                </div>
+                <br>
+                <a href="https://discord.gg/RnPgShE6vh" class="button" onclick="changeButtonColor()" id="discordButton">Rejoindre
+                    le serveur Discord</a>
+                <br>
+                <br>
+                <div class="discord-widget">
+                    <iframe class="discord-iframe" src="https://discord.com/widget?id=1108029635096223814&theme=dark"
+                            width="auto"
+                            height="auto" allowtransparency="true"
+                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+            </div>
+        </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>À propos de nous</h2>
-            <div class="box">
-                <br>
-                <h3>Expérience de jeu unique</h3>
-                <p>Arcane Blades offre une expérience de jeu Minecraft unique avec des fonctionnalités et plugins
-                    exclusifs.
-                    Plongez dans un monde amical rempli de zombies et autres monstres.</p>
+        <section id="about">
+            <div class="wrapper">
+                <h2>À propos de nous</h2>
+                <div class="box">
+                    <br>
+                    <h3>Expérience de jeu unique</h3>
+                    <p>Arcane Blades offre une expérience de jeu Minecraft unique avec des fonctionnalités et plugins
+                        exclusifs.
+                        Plongez dans un monde amical rempli de zombies et autres monstres.</p>
+                </div>
+                <div class="box">
+                    <br>
+                    <h3>Communauté chaleureuse</h3>
+                    <p>Rejoignez notre communauté de joueurs passionnés. Faites-vous de nouveaux amis, participez à des
+                        activités en groupe et construisez toujours plus haut !</p>
+                </div>
+                <div class="box">
+                    <br>
+                    <h3>Staff dévoué</h3>
+                    <p>Notre équipe de développement est à l'écoute des suggestions et active pour résoudre tous les soucis
+                        que
+                        vous pourriez rencontrer. Eux-mêmes joueurs, vous pourrez croiser les créateurs en jeu, avec vous
+                        !</p>
+                </div>
             </div>
-            <div class="box">
-                <br>
-                <h3>Communauté chaleureuse</h3>
-                <p>Rejoignez notre communauté de joueurs passionnés. Faites-vous de nouveaux amis, participez à des
-                    activités en groupe et construisez toujours plus haut !</p>
-            </div>
-            <div class="box">
-                <br>
-                <h3>Staff dévoué</h3>
-                <p>Notre équipe de développement est à l'écoute des suggestions et active pour résoudre tous les soucis
-                    que
-                    vous pourriez rencontrer. Eux-mêmes joueurs, vous pourrez croiser les créateurs en jeu, avec vous
-                    !</p>
-            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2023 Arcane Blades. Tous droits réservés.</p>
         </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container">
-        <p>&copy; 2023 Arcane Blades. Tous droits réservés.</p>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
