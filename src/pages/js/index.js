@@ -19,3 +19,22 @@ function copyToClipboard(text) {
         button.style.color = '';
     }, 1000);
 }
+
+window.addEventListener('load', async function () {
+    const totalPlayers = document.getElementById('total--players');
+    const totalTime = document.getElementById('total--time');
+
+    let totalPlayersRes = await fetch('https://api.feyli.studio/count/total_players');
+    totalPlayersRes = totalPlayersRes.json();
+
+    let totalTimeRes = await fetch('https://api.feyli.studio/count/total_time');
+    totalTimeRes = totalTimeRes.json();
+    let totalPlaytime = totalTimeRes.total || 0;
+
+    const hours = Math.floor(totalPlaytime / 3600);
+
+    setTimeout(() => {
+        totalPlayers.textContent = totalPlayersRes.total || 'Non disponible';
+        totalTime.textContent = hours || 'Non disponible';
+    }, 100);
+});
