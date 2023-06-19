@@ -1,3 +1,8 @@
+/* Color variables */
+:root {
+    --accentuate-color: #71EEF7;
+}
+
 /* Reset styles */
 * {
     margin: 0;
@@ -8,77 +13,112 @@
 /* Basic styles */
 body {
     font-family: Inter, sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #0a0a2e;
+    background: linear-gradient(#021925, #021021);
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    height: 100%;
 }
 
-.wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 20px 0;
+    text-align: center;
 }
 
 /* Header styles */
 header {
-    background-color: #0d3b66;
+    background: radial-gradient(circle, #183a60 50%, #102842 100%);
+    /*background-color: #1C5D99;*/
+    height: 70px;
     padding: 10px;
     text-align: center;
-    margin-bottom: 20px;
-    border-radius: 0 0 10px 10px;
+    margin: 20px;
+    border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    flex-shrink: 1;
+    margin: auto 0;
 }
 
 .logo {
-    color: #ffffff;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style-type: none;
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    flex-shrink: 1;
+    gap: 10px;
+    color: #ffffff;
+    margin: auto 0;
 }
 
-nav ul li {
-    margin-right: 10px;
+.logo img {
+    height: 100%;
+    border-radius: 10px;
+    pointer-events: none;
 }
 
-nav ul li a {
+.logo h5 {
+    font-size: 24px;
+    user-select: none;
+}
+
+header a {
     color: #ffffff;
     text-decoration: none;
     padding: 12px 24px;
-    background-color: #559cad;
+    background-color: var(--accentuate-color);
     border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-nav ul li a:hover {
+header a:hover {
     background-color: #ffffff;
     color: #140400;
     transform: scale(1.05);
 }
 
-nav ul li a:active {
+header a:active {
     transform: scale(0.95);
 }
 
 /* Main styles */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 1000px
+}
+
 section {
-    margin: 25px;
     padding: 40px;
     border-radius: 10px;
-    background-color: rgba(25, 27, 42, 0.95);
+    background: radial-gradient(circle, #183a60 50%, #102842 100%);
+    /*background-color: #1C5D99;*/
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border: white 1px solid;
+    color: white;
+    width: 100%;
 }
 
 #hero {
     text-align: center;
-    margin: 25px;
 }
 
 #hero h1 {
@@ -94,19 +134,14 @@ section {
 
 
 .discord-widget {
-    justify-content: center;
-    flex: 1;
+    max-width: 1000px;
     height: 500px;
-    width: 1000px;
     background-color: #1f212e;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    flex-direction: column;
 }
 
 
@@ -154,174 +189,91 @@ input[type="submit"]:active {
     transform: scale(0.95);
 }
 
-/* Footer styles */
-footer {
-    background-color: #0d3b66;
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    margin-top: auto;
-}
-
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.menu li a {
+header a {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #559cad;
+    background-color: #12738E;
     color: #ffffff;
     border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.menu li a:hover {
-    background-color: #ffffff;
-    color: #140400;
+header a:hover {
+    background-color: var(--accentuate-color);
+    color: black;
     transform: scale(1.05);
 }
 
-.menu li a:active {
+header a:active {
     transform: scale(0.95);
 }
 
-
-/* Card styles */
-.card {
-    perspective: 1000px;
+.button {
     display: inline-block;
+    padding: 12px 24px;
+    background-color: #12738E;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
-    width: 300px;
-    height: 300px;
-    margin: 10px;
 }
 
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+.button:hover {
+    background-color: var(--accentuate-color);
+    color: black;
+    transform: scale(1.05);
 }
 
-.card:hover .card-inner {
-    transform: rotateY(180deg);
+.button:active {
+    transform: scale(0.95);
+    background-color: rgba(85, 173, 115, 0.8);
 }
 
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    background-color: #0d3b66;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.card-back {
-    background-color: rgba(25, 27, 42, 0.95);
-    color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    transform: rotateY(180deg);
-    overflow-y: auto;
-}
-
-.annonce-date {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.annonce-content {
-    font-size: 14px;
+button.button {
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
 
 
 /* Styles pour les appareils mobiles */
 @media (max-width: 767px) {
     /* Modifiez les styles selon vos besoins */
-    header {
-        padding: 5px;
-    }
-
-    .logo {
+    .logo h5 {
         font-size: 20px;
+        white-space: pre-line;
     }
 
-    nav ul li a {
+    header {
+        justify-content: space-between;
+    }
+
+    header a {
         padding: 8px 16px;
     }
 
     section {
-        margin: 10px;
         padding: 20px;
     }
 
     .discord-widget {
-        height: 250px;
-        margin: 5px;
-    }
-
-    .card {
-        height: 200px;
-        margin: 5px;
-    }
-
-    .card-front,
-    .card-back {
-        font-size: 18px;
-    }
-
-    .annonce-date {
-        font-size: 24px;
-    }
-
-    .annonce-content {
-        font-size: 12px;
-    }
-}
-
-
-/* Centrer les cartes sur les petits écrans */
-@media screen and (max-width: 768px) {
-    .announcement {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .card {
-        margin: 10px;
-    }
-}
-
-
-/* Styles pour le widget Discord sur les appareils mobiles */
-/* Masquer l'intégration Discord sur les appareils mobiles */
-@media screen and (max-width: 767px) {
-    .discord-widget {
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    /* Modifiez les styles selon vos besoins */
+    .logo h5 {
+        display: none;
+    }
+
+    nav ul li a {
+        padding: 6px 12px;
+    }
+
+    section {
+        padding: 10px;
     }
 }
