@@ -94,7 +94,7 @@ main {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 0 auto 20px;
     padding: 0 20px;
     max-width: 1000px
 }
@@ -195,33 +195,6 @@ textarea {
     resize: none;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #1f212e;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #559cad;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #ffffff;
-    color: #140400;
-    transform: scale(1.05);
-}
-
-input[type="submit"]:active {
-    transform: scale(0.95);
-}
-
 header a {
     display: inline-block;
     padding: 12px 24px;
@@ -245,6 +218,7 @@ header a:active {
 button {
     background: none;
     border: none;
+    color: initial;
     font-family: Inter, sans-serif;
     font-size: 16px;
 }
@@ -345,5 +319,13 @@ button {
 
     #numbers h3 {
         font-size: 12px;
+    }
+}
+
+@media (pointer: coarse) {
+    /* Modifier le comportement des boutons et leur caractéristique hover */
+    .button:hover {
+        background-color: white;
+        transform: none;
     }
 }

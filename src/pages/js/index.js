@@ -10,12 +10,12 @@ function copyToClipboard(text) {
     document.body.removeChild(textarea);
 
     button.textContent = 'IP copiée !';
-    button.style.backgroundColor = 'rgba(85, 173, 115, 0.8)';
-    button.style.color = '#140400';
+    button.parentElement.style.backgroundColor = 'rgba(85, 173, 115, 0.8)';
+    button.style.color = 'white';
 
     setTimeout(function () {
         button.textContent = originalText;
-        button.style.backgroundColor = '';
+        button.parentElement.style.backgroundColor = '';
         button.style.color = '';
     }, 1000);
 }
