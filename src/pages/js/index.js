@@ -40,6 +40,37 @@ async function updateCounters() {
     }, 1);
 }
 
+async function updateOnlineStatus() {
+    const onlineStatus = document.getElementById('curact');
+    const onlineStatusText = document.getElementById('online-status-text');
+    const onlineSvg = document.getElementById('online-svg');
+
+    let res = await fetch('https://api.feyli.studio/online');
+    res = await res.json();
+    console.log(res);
+    if (res.up === 1) {
+        if (Math.floor(Date.now() / 1000) - res.timestamp > 60000) {
+            onlineStatus.style.display = 'none';
+        } else if (res["online_players"] !== 0) {
+            onlineStatus.style.dispay = 'flex';
+            onlineSvg.classList.remove('offline');
+            onlineSvg.classList.add('online');
+            onlineStatusText.textContent = res["online_players"] + ' joueur' + (res["online_players"] > 1 ? 's' : '') + ' en ligne';
+        } else {
+            onlineStatus.style.display = 'flex';
+            onlineSvg.classList.remove('offline');
+            onlineSvg.classList.add('online');
+            console.log(onlineSvg.classList);
+            onlineStatusText.textContent = 'Aucun joueur en ligne';
+        }
+    } else {
+        onlineStatus.style.display = 'flex';
+        onlineSvg.classList.remove('online');
+        onlineSvg.classList.add('offline');
+        onlineStatusText.textContent = 'Serveur hors ligne';
+    }
+}
+
 window.addEventListener('load', async function () {
     // update counters when the user scrolls to the numbers section, only once
     const counters = document.getElementById('numbers');
@@ -50,4 +81,8 @@ window.addEventListener('load', async function () {
         }
     });
     observer.observe(counters);
+
+    // update the online status every 20 seconds
+    await updateOnlineStatus();
+    setInterval(updateOnlineStatus, 20000);
 });
