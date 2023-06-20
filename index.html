@@ -9,6 +9,8 @@
     <title>Accueil - Arcane Blades</title>
     <link rel="stylesheet" type="text/css" href="src/pages/css/reset.css">
     <link rel="stylesheet" type="text/css" href="src/pages/css/index.css">
+    <link rel="stylesheet" type="text/css" href="src/pages/css/odometer.css">
+    <script src="https://github.hubspot.com/odometer/odometer.js"></script>
     <script src="src/pages/js/index.js"></script>
 
     <!--Open Graph-->
@@ -40,16 +42,21 @@
                 <h1>Bienvenue sur Arcane Blades</h1>
                 <p>Rejoignez notre communauté de joueurs passionnés sur notre serveur Minecraft.</p>
                 <br>
-                <div>
-                    <button class="button" onclick="copyToClipboard('play.arcanemc.live')" id="copyButton">Copier l'IP du
-                        serveur Minecraft
+                <div class="button">
+                    <span>📎</span>
+                    <button onclick="copyToClipboard('play.arcanemc.live')" id="copyButton">Copier l'IP du serveur Minecraft
                     </button>
                 </div>
-                <a href="https://instagram.com/arcane.blades" target="_blank" class="button" id="instagramButton">Suivez-nous sur
-                    Instagram</a>
                 <br>
-                <a href="https://discord.gg/ZPJPjSdfwT" target="_blank" class="button" id="discordButton">Rejoindre
-                    le serveur Discord</a>
+                <div id="instagramButton" class="button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="instagram logo">
+                    <a href="https://instagram.com/arcane.blades" target="_blank">Suivez-nous sur Instagram</a>
+                </div>
+                <br>
+                <div class="button">
+                    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="discord logo">
+                    <a href="https://discord.gg/ZPJPjSdfwT" target="_blank" id="discordButton">Rejoignez notre serveur Discord</a>
+                </div>
                 <br>
                 <br>
                 <div class="discord-widget">

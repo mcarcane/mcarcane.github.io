@@ -20,21 +20,34 @@ function copyToClipboard(text) {
     }, 1000);
 }
 
-window.addEventListener('load', async function () {
+async function updateCounters() {
     const totalPlayers = document.getElementById('total--players');
     const totalTime = document.getElementById('total--time');
 
     let totalPlayersRes = await fetch('https://api.feyli.studio/count/total_players');
-    totalPlayersRes = totalPlayersRes.json();
+    totalPlayersRes = await totalPlayersRes.json();
 
     let totalTimeRes = await fetch('https://api.feyli.studio/count/total_time');
-    totalTimeRes = totalTimeRes.json();
+    totalTimeRes = await totalTimeRes.json();
     let totalPlaytime = totalTimeRes.total || 0;
 
     const hours = Math.floor(totalPlaytime / 3600);
 
     setTimeout(() => {
         totalPlayers.textContent = totalPlayersRes.total || 'Non disponible';
-        totalTime.textContent = hours || 'Non disponible';
-    }, 100);
+        if (hours > 0) totalTime.innerText = hours.toString();
+        else document.getElementById('total--time').parentElement.innerText = 'Non disponible';
+    }, 1);
+}
+
+window.addEventListener('load', async function () {
+    // update counters when the user scrolls to the numbers section, only once
+    const counters = document.getElementById('numbers');
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            updateCounters();
+            observer.disconnect();
+        }
+    });
+    observer.observe(counters);
 });

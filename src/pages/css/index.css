@@ -202,12 +202,22 @@ header a:active {
     transform: scale(0.95);
 }
 
+button {
+    background: none;
+    border: none;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+}
+
 .button {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 5px;
-    background-color: #12738E;
-    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px 12px 20px;
+    margin: 0 auto;
+    height: 2.5em;
+    width: fit-content;
+    background-color: white;
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s;
@@ -216,7 +226,6 @@ header a:active {
 
 .button:hover {
     background-color: var(--accentuate-color);
-    color: black;
     transform: scale(1.05);
 }
 
@@ -225,10 +234,19 @@ header a:active {
     background-color: rgba(85, 173, 115, 0.8);
 }
 
-button.button {
-    border: none;
-    outline: none;
-    font-size: 16px;
+.button span {
+    margin-right: 10px;
+}
+
+.button img {
+    height: 1em;
+    /* center vertically */
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+#instagramButton img {
+    height: 1.2em;
 }
 
 #numbers .wrapper .box {
@@ -238,6 +256,9 @@ button.button {
     row-gap: 15px;
 }
 
+#numbers .wrapper .box .item h3 {
+    margin-bottom: 5px;
+}
 
 /* Styles pour les appareils mobiles */
 @media (max-width: 767px) {
@@ -276,5 +297,9 @@ button.button {
 
     section {
         padding: 10px;
+    }
+
+    #numbers h3 {
+        font-size: 12px;
     }
 }
