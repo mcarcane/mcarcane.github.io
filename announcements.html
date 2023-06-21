@@ -5,9 +5,11 @@
     <title>Arcane Blades - Annonces</title>
     <link rel="stylesheet" type="text/css" href="src/pages/css/reset.css">
     <link rel="stylesheet" type="text/css" href="src/pages/css/announcements.css">
-    <script src="src/pages/js/announcements.js"></script>
+    <script src="src/pages/js/marked.min.js"></script>
+    <script src="src/pages/js/announcements.js" defer></script>
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="logo">
             <img src="src/assets/favicon.png" alt="Arcane Blades"><h5>Arcane
@@ -18,8 +20,12 @@
             <a href="#">Annonces</a>
         </nav>
     </header>
-    <h1>
-        Cette page est en cours de construction...
-    </h1>
+    <main>
+        <div class="card-container">
+        </div>
+        <div id="empty-string">
+            C'est bien vide ici ! Revenez plus tard pour voir les annonces.
+        </div>
+    </main>
 </body>
 </html>

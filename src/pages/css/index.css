@@ -279,6 +279,10 @@ button {
     margin-bottom: 5px;
 }
 
+#numbers span {
+    font-weight: 700;
+}
+
 /* Styles pour les appareils mobiles */
 @media (max-width: 767px) {
     /* Modifiez les styles selon vos besoins */

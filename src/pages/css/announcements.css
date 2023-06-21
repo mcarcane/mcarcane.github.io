@@ -20,6 +20,23 @@ body {
     height: 100%;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    backdrop-filter: brightness(1) blur(0);
+    transition: backdrop-filter 0.3s ease-in-out;
+}
+
+.overlay.active {
+    z-index: 1;
+    backdrop-filter: brightness(0.5) blur(10px);
+}
+
 h1 {
     font-size: 48px;
     font-weight: 700;
@@ -126,31 +143,6 @@ section {
     margin-bottom: 20px;
 }
 
-.widget-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-
-.discord-widget {
-    max-width: 1000px;
-    height: 500px;
-    background-color: #1f212e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.discord-widget iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 textarea {
     width: 100%;
     padding: 10px;
@@ -160,33 +152,6 @@ textarea {
     border: none;
     border-radius: 5px;
     resize: none;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #1f212e;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #559cad;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #ffffff;
-    color: #140400;
-    transform: scale(1.05);
-}
-
-input[type="submit"]:active {
-    transform: scale(0.95);
 }
 
 header a {
@@ -207,6 +172,125 @@ header a:hover {
 
 header a:active {
     transform: scale(0.95);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#empty-string {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card {
+    background: linear-gradient(#12738E, #072738);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 300px;
+}
+
+.card.important {
+    background: linear-gradient(#EABC87, #C07D53);
+    color: black;
+}
+
+.card-header {
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-header h4 {
+    position: absolute;
+    width: 260px;
+    text-align: right;
+    font-size: smaller;
+    font-weight: 300;
+}
+
+.card-header h3 {
+    position: relative;
+    top: 50%;
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.card-body {
+    display: none;
+    text-overflow: clip;
+    overflow: auto;
+    position: absolute;
+    background: linear-gradient(#021021, #020315);
+    height: fit-content;
+    max-height: 90%;
+    width: 90%;
+    max-width: 900px;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 30px;
+    opacity: 100%;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.card-body button {
+    display: inline-block;
+    position: absolute;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card.visible .card-body {
+    display: block;
+    animation: card-appear 0.7s ease-out;
+}
+
+.card.hiding .card-body {
+    animation: card-disappear 0.7s ease-out;
+}
+
+.card-body h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.card-body h4 {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.card-body h2, .card-body h4 {
+    margin-left: 50px;
+}
+
+.card-body span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 50px;
+    line-height: 1.5em;
+}
+
+.card-body ol, .card-body ul {
+    margin: 10px 30px;
+    padding: initial;
+    list-style: initial;
 }
 
 .button {
@@ -275,5 +359,44 @@ button.button {
 
     section {
         padding: 10px;
+    }
+
+    .card-body span {
+        padding: 0;
+    }
+}
+
+@keyframes card-appear {
+    0% {
+        overflow: hidden;
+        opacity: 50%;
+        max-height: 50%;
+    }
+
+    60% {
+        opacity: 100%;
+    }
+
+    100% {
+        overflow: hidden;
+        max-height: 90%;
+    }
+}
+
+@keyframes card-disappear {
+    0% {
+        overflow: hidden;
+        opacity: 100%;
+        max-height: 90%;
+    }
+
+    30% {
+        max-height: 50%;
+    }
+
+    100% {
+        overflow: hidden;
+        opacity: 0;
+        max-height: 35%;
     }
 }
