@@ -198,8 +198,8 @@ textarea {
 header a {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #12738E;
-    color: #ffffff;
+    background-color: #fdfdfd;
+    color: #000000;
     border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
