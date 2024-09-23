@@ -1,3 +1,5 @@
+const baseApiUrl = "https://api.arcaneblades.me";
+
 function copyToClipboard(text) {
     const button = document.getElementById('copyButton');
     const originalText = button.textContent;
@@ -24,10 +26,10 @@ async function updateCounters() {
     const totalPlayers = document.getElementById('total--players');
     const totalTime = document.getElementById('total--time');
 
-    let totalPlayersRes = await fetch('https://api.arcanemc.live/count/total_players');
+    let totalPlayersRes = await fetch(baseApiUrl + '/count/total_players');
     totalPlayersRes = await totalPlayersRes.json();
 
-    let totalTimeRes = await fetch('https://api.arcanemc.live/count/total_time');
+    let totalTimeRes = await fetch(baseApiUrl + '/count/total_time');
     totalTimeRes = await totalTimeRes.json();
     let totalPlaytime = totalTimeRes.total || 0;
 
@@ -45,7 +47,7 @@ async function updateOnlineStatus() {
     const onlineStatusText = document.getElementById('online-status-text');
     const onlineSvg = document.getElementById('online-svg');
 
-    let res = await fetch('https://api.arcanemc.live/online');
+    let res = await fetch(baseApiUrl + '/online');
     res = await res.json();
     console.log(res);
     if (res.up === 1) {
