@@ -36,12 +36,12 @@ window.onload = async () => {
             if (response.length > 0) document.querySelector('#empty-string').style.display = 'none';
             response.forEach(announcement => {
                 const html =
-                    "            <div class=\"card\">\n" +
+                    `            <div class="card${announcement["date"] ? " important" : ""}">\n` +
                     "                <div class=\"card-header\" onclick=\"showCard(this);\">\n" +
-                    `                    <h4>Publiée le ${announcement.date}</h4>\n` +
-                    `                    <h3>${announcement.title}</h3>\n` +
+                    `                    <h4>Publiée le ${announcement["date"]}</h4>\n` +
+                    `                    <h3>${announcement["title"]}</h3>\n` +
                     "                </div>\n" +
-                    `                <div class=\"card-body\"><button onclick=\"hideCard(this);\">×</button><h2>${announcement.title}</h2><h4>Publiée le ${announcement.date}</h4><span>${marked.parse(announcement.content, {
+                    `                <div class=\"card-body\"><button onclick=\"hideCard(this);\">×</button><h2>${announcement["title"]}</h2><h4>Publiée le ${announcement["date"]}</h4><span>${marked.parse(announcement["content"], {
                         gfm: true,
                         breaks: true
                     })}</span></div>\n` +

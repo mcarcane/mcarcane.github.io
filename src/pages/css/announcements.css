@@ -201,6 +201,9 @@ header a:active {
 
 .card.important {
     background: linear-gradient(#EABC87, #C07D53);
+}
+
+.card.important .card-header {
     color: black;
 }
 
