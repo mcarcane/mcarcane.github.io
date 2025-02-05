@@ -1,4 +1,4 @@
-const baseApiUrl = "https://api.arcaneblades.me";
+const baseApiUrl = "https://beaver.feyli.me";
 
 function copyToClipboard(text) {
     const button = document.getElementById('copyButton');
