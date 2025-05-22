@@ -1,56 +1,103 @@
 [
   {
-    "title": "Maintenance prolongée",
-    "date": "22/11/2023",
-    "important": true,
-    "content": "Bonsoir à tous,\n\nNous souhaitons vous informer qu'Arcane Blades sera inaccessible jusqu'à fin novembre maximum pour cause de maintenance. Nous nous excusons pour la gêne occasionnée.\n\nLes modifications visent à améliorer l'expérience utilisateur globale :\n- Meilleures performances\n- Correction de bogues\n- Réduction des ralentissements (réseau et hardware)\n\nUne sauvegarde complète a été effectuée.\n\nMerci de votre compréhension,\nLa @Dev Team."
+    "date": "2025-05-19",
+    "title": "Serveurs accessibles",
+    "notes": [
+      "Les 3 serveurs sont désormais stables (stress-tests encore à faire) et accessibles aux adresses suivantes :",
+      "🩵 Arcane Blades (Vanilla, Survie) : mc.arcaneblades.me",
+      "💚 Le Bunker (Vanilla, Créatif) : crea.arcaneblades.me",
+      "🩷 Arcane Prominence (Moddé, Survie) : mod.arcaneblades.me",
+      "Rappel du respect des constructions, des mondes et des joueurs."
+    ]
   },
   {
-    "title": "Retour en ligne",
-    "date": "18/06/2024",
-    "important": true,
-    "content": "Bonsoir à tous,\n\nArcane Blades est de nouveau opérationnel ! Voici les modifications apportées :\n- Retrait des plugins inutiles (économie)\n- Optimisation de l'OS Server\n- Optimisation des sauvegardes\n- Léger bridage du disque pour plus de stabilité (ACS : Anti-Corruption System)\n\nÀ venir : TAB Menu personnalisé et plugins d'interactions.\nNote : les équipes de plugins ont été effacées et devront être recréées.\n\nMerci de votre compréhension,\nLa @Dev Team."
-  },
-  {
-    "title": "1 an d'Arcane Blades",
-    "date": "02/08/2024",
-    "important": true,
-    "content": "Bonjour à toutes et à tous,\n\nArcane Blades fête son premier anniversaire !\n\nCependant, après un an, nous perdons le nom de domaine. Cela impacte :\n- L'adresse de connexion au serveur\n- L'adresse Internet du site\n- Les redirections internes\n\nDernière visite : https://arcanemc.live/\nLe serveur reste accessible via : 88.170.151.90:32768\n\nMerci d’avoir été là durant cette belle aventure.\nLa @Dev Team."
-  },
-  {
-    "title": "Mise à jour Live 2.1",
-    "date": "02/08/2024",
-    "important": false,
-    "content": "Bonjour à tous,\n\nArcane Blades passe en version Live 2.1 !\n- Nouveau logo\n- Support des versions 1.19.4 à 1.21+\n- Plugins mis à jour\n- Bugs mineurs corrigés\n- Nettoyage et optimisation des fichiers serveurs\n\nIP du serveur : 88.170.151.90:32768\n\nMerci à tous,\nLa @Dev Team."
-  },
-  {
-    "title": "Perte du monde",
-    "date": "03/08/2024",
-    "important": true,
-    "content": "Mesdames, Messieurs,\n\nSuite à une manipulation technique, le monde d'Arcane Blades et vos constructions ont été perdus.\n\nDes backups ont été testés mais non reconnus par le serveur.\nNous vous consultons : un sondage est en place pour décider de l’avenir du serveur.\n\nUne archive du monde est disponible au téléchargement.\n\nNous sommes profondément désolés.\nLa @Dev Team."
-  },
-  {
-    "title": "Arcane Blades Moddé - Alpha 1.0",
-    "date": "05/08/2024",
-    "important": true,
-    "content": "Bonjour à tous,\n\nArcane Blades passe en version Alpha 1.0 Moddée !\n\nSuite à vos votes, le serveur utilise désormais le modpack ATM9 (400+ mods) pour une expérience Minecraft inédite.\n\nRecommandé : CurseForge via Overwolf.\nNote : version Alpha = possibles bugs / lags.\n\nIP du serveur : 88.170.151.90:32768\n\nBonne exploration,\nLa @Dev Team."
-  },
-  {
-    "title": "Mise à jour 2.3",
-    "date": "22/09/2024",
-    "important": true,
-    "content": "Hello à tous,\n\nVoici la mise à jour Vanilla 2.3 d'Arcane Blades !\n\n- Nouveau site : https://arcaneblades.me/\n- Support des versions postérieures à 1.21\n- Déploiement imminent des plugins de niveaux & progression\n- Nouvelle IP : mc.arcaneblades.me\n\nMerci de votre fidélité,\nLa @Dev Team."
-  },
-  {
+    "date": "2025-05-18",
     "title": "Mise à jour 3.0",
-    "date": "18/05/2025",
-    "important": true,
-    "content": "Salut à tous,\n\nVoici la mise à jour 3.0 d’Arcane Blades !\n- Nouveau logo et motd\n- Passage sur Paper pour plus de performances\n- Autosave temporairement désactivée\n- Tous les plugins mis à jour\n- Sécurité et stabilité renforcées\n- Plugins de niveaux/progression en cours de révision\n\nVos retours sont toujours les bienvenus !\nLa @Dev Team."
+    "notes": [
+      "Nouvelle identité visuelle : logo + motd",
+      "Migration vers Paper : meilleures performances",
+      "Désactivation temporaire de l’autosave",
+      "Mise à jour complète des plugins",
+      "Renforcement de la sécurité et stabilité (hardware + réseau)",
+      "Révision en cours des plugins de niveaux/progression"
+    ]
   },
   {
-    "title": "Stabilisation multi-serveurs",
-    "date": "19/05/2025",
-    "important": false,
-    "content": "Salut à tous,\n\nLes 3 serveurs sont désormais stables (stress-tests à venir) :\n🩵 Arcane Blades (Vanilla, Survie) : mc.arcaneblades.me\n💚 Le Bunker (Vanilla, Créatif) : crea.arcaneblades.me\n🩷 Arcane Prominence (Moddé, Survie) : mod.arcaneblades.me\n\nMerci de respecter les constructions et les joueurs.\nVos suggestions sont toujours bienvenues.\nLa @Dev Team."
+    "date": "2024-09-23",
+    "title": "Mise à jour 2.3",
+    "notes": [
+      "ViaVersion opérationnel (1.21+)",
+      "Nouveau nom de domaine et nouvelle IP",
+      "Ajout de systèmes de niveau, progression et classement",
+      "Déploiement de plugins développés en interne",
+      "Amélioration de la sécurité",
+      "Liaison avec le serveur Discord",
+      "Optimisation des performances et sauvegarde auto",
+      "Correction de bugs"
+    ]
+  },
+  {
+    "date": "2024-08-05",
+    "title": "Version Alpha 1.0 Moddée",
+    "notes": [
+      "Passage du serveur en version moddé",
+      "Utilisation du modpack ATM9 (>400 mods)",
+      "Recommandation : CurseForge / Overwolf pour l’installation",
+      "Possibles lags à cause de la lourdeur du modpack",
+      "Version Alpha = bugs possibles",
+      "IP : 88.170.151.90:32768"
+    ]
+  },
+  {
+    "date": "2024-08-03",
+    "title": "Incident : Monde perdu",
+    "notes": [
+      "Perte du monde principal suite à un changement de version + fichiers plugins",
+      "Backups existants refusés par le serveur",
+      "Mise à disposition d'une archive du dernier backup",
+      "Sondage lancé pour décider du futur du serveur"
+    ]
+  },
+  {
+    "date": "2024-08-02",
+    "title": "Version Live 2.1",
+    "notes": [
+      "Nouveau logo",
+      "Compatibilité étendue : 1.19.4 à 1.21",
+      "Plugins mis à jour",
+      "Correction de bugs mineurs",
+      "Nettoyage et optimisation des fichiers serveurs"
+    ]
+  },
+  {
+    "date": "2024-06-18",
+    "title": "Fin du nom de domaine",
+    "notes": [
+      "Perte du nom de domaine : plus d’adresse simplifiée",
+      "Impact : adresse serveur, page web, redirections internes",
+      "Le serveur reste accessible à : 88.170.151.90:32768"
+    ]
+  },
+  {
+    "date": "2023-11-22",
+    "title": "Retour du serveur",
+    "notes": [
+      "Retrait de plugins inutiles (économie)",
+      "Optimisation de l’OS serveur",
+      "Optimisation des sauvegardes",
+      "Bridage léger du disque (ACS – Anti-Corruption System)",
+      "Perte des équipes plugins → recréation nécessaire",
+      "TAB Menu personnalisé et plugins interactions à venir"
+    ]
+  },
+  {
+    "date": "2023-11-20",
+    "title": "Maintenance prolongée",
+    "notes": [
+      "Inaccessibilité jusqu’à fin novembre max",
+      "Objectifs : améliorer performances, corriger bugs, réduire latence réseau/hardware",
+      "Sauvegarde complète effectuée",
+      "Aucune perte de données prévue"
+    ]
   }
 ]
