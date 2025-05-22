@@ -32,22 +32,47 @@ document.querySelector('.overlay').addEventListener('click', function () {
 // Convert Markdown to HTML for each announcement
 window.onload = async () => {
     await fetch('./src/pages/announcements.json').then(response => {
-        response.json().then(response => {
-            if (response.length > 0) document.querySelector('#empty-string').style.display = 'none';
-            response.forEach(announcement => {
-                const html =
-                    `            <div class="card${announcement["date"] ? " important" : ""}">\n` +
-                    "                <div class=\"card-header\" onclick=\"showCard(this);\">\n" +
-                    `                    <h4>Publiée le ${announcement["date"]}</h4>\n` +
-                    `                    <h3>${announcement["title"]}</h3>\n` +
-                    "                </div>\n" +
-                    `                <div class=\"card-body\"><button onclick=\"hideCard(this);\">×</button><h2>${announcement["title"]}</h2><h4>Publiée le ${announcement["date"]}</h4><span>${marked.parse(announcement["content"], {
-                        gfm: true,
-                        breaks: true
-                    })}</span></div>\n` +
-                    "            </div>";
-                document.querySelector('.card-container').innerHTML += html;
+        return response.json();
+    }).then(data => {
+        if (data.length > 0) document.querySelector('#empty-string').style.display = 'none';
+        data.forEach(announcement => {
+            // Formater la date pour l'affichage
+            const date = new Date(announcement.date);
+            const formattedDate = date.toLocaleDateString('fr-FR', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
             });
+
+            let notesHtml = '';
+            if (announcement.notes && announcement.notes.length > 0) {
+                notesHtml = '<ul>';
+                announcement.notes.forEach(note => {
+                    if (note) {
+                        notesHtml += `<li>${marked.parse(note, {
+                            gfm: true,
+                            breaks: true
+                        })}</li>`;
+                    }
+                });
+                notesHtml += '</ul>';
+            }
+
+            const html =
+                `<div class="card${announcement.date ? " important" : ""}">\n` +
+                "    <div class=\"card-header\" onclick=\"showCard(this);\">\n" +
+                `        <h4>Publiée le ${formattedDate}</h4>\n` +
+                `        <h3>${announcement.title}</h3>\n` +
+                "    </div>\n" +
+                `    <div class=\"card-body\"><button onclick=\"hideCard(this);\">×</button>` +
+                `<h2>${announcement.title}</h2>` +
+                `<h4>Publiée le ${formattedDate}</h4>` +
+                `<span>${notesHtml}</span></div>\n` +
+                "</div>";
+            document.querySelector('.card-container').innerHTML += html;
         });
+    }).catch(error => {
+        console.error('Erreur lors du chargement des annonces:', error);
+        document.querySelector('#empty-string').style.display = 'block';
     });
 };
